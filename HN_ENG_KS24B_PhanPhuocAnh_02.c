@@ -46,7 +46,7 @@ int main() {
         printf("7: Tim kiem phan tu co trong mang\n");
         printf("8: Sap xep le truoc, chan sau\n");
         printf("9: Kiem tra mang co tang dan khong\n");
-        printf("8: Thoat chuong trinh\n");
+        printf("10: Thoat chuong trinh\n");
         scanf("%d", &choose);
 
         switch (choose) {
