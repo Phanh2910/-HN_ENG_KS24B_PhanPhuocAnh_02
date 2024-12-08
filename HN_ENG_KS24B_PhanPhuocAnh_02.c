@@ -8,18 +8,6 @@ int PerfectNumber(int n){
     }
     return (sum==n&&n!= 0);
 }
-int secSmallest(int arr[], int n) {
-    int smallest=arr[0], secSmall = -1;
-    for (int i=1;i<n; i++) {
-        if (arr[i] < smallest) {
-            secSmall = smallest;
-            smallest = arr[i];
-        } else if (arr[i] > smallest && (secSmall == -1 || arr[i] < secSmall)) {
-            secSmall = arr[i];
-        }
-    }
-    return secSmall;
-}
 
 int main() {
     int choose, position;
@@ -69,14 +57,26 @@ int main() {
 
             case 3:
                 {
-                    int secSmall=secSmallest(arr, n);
-                    if (secSmall == -1) {
-                        printf("Mang khong co gia tri nho thu 2.\n");
-                    } else {
-                        printf("Gia tri nho thu 2 trong mang la: %d\n", secSmall);
-                    }
-                }
-                break;
+			int n_perfect;
+			int tong=1;
+			for(int i=2;i<=sqrt(n_perfect);i++){
+			if(n_perfect%i==0){
+				tong+=i;
+				if(i != n_perfect/i){
+					tong+=n/i;
+					return 1;
+				}
+				return 0;
+			}
+			
+		}
+		if(tong==n_perfect||n!=1){
+		
+			
+		}
+			
+			break;
+		}
 
             case 4:
                 printf("Nhap vao vi tri muon them: ");
